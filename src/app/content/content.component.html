@@ -1,0 +1,2 @@
+<app-employee-form [(formModel)]="rowData"></app-employee-form>
+<app-employee-list [dataList]="dataList" (onDeleteRow)="receiveDeleteKey($event)" (onEditRow)="receiveRowData($event)"></app-employee-list>

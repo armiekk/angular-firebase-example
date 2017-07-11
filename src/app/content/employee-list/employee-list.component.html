@@ -1,0 +1,31 @@
+<!--<ul>
+  <li *ngFor="let data of dataList">
+    <p>Name: {{data.name}}</p>
+    <p>Age: {{data.age}}</p>
+    <p>Address: {{data.address}}</p>
+    <p>Tel: {{data.tel}}</p>
+  </li>
+</ul>-->
+<table style="width: 80%; margin: 0 auto">
+  <thead>
+    <th>ลำดับ</th>
+    <th>ชื่อ</th>
+    <th>อายุ</th>
+    <th>ที่อยู่</th>
+    <th>เบอร์โทรศัพท์</th>
+    <th></th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let data of dataList; index as i">
+      <td style="text-align: center">{{i + 1}}</td>
+      <td style="text-align: center">{{data.name}}</td>
+      <td style="text-align: center">{{data.age}}</td>
+      <td style="text-align: center">{{data.address}}</td>
+      <td style="text-align: center">{{data.tel}}</td>
+      <td>
+        <button (click)="clickEditRow(data)">แก้ไข</button>
+        <button (click)="clickDeleteRow(data.$key)">ลบ</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

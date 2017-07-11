@@ -1,0 +1,12 @@
+<form (submit)="submitForm($event, formModel)">
+  <label for="name">ชื่อ:</label>
+  <input type="text" name="name" [(ngModel)]="formModel.name" id="name">
+  <label for="age">อายุ:</label>
+  <input type="text" id="age" name="age" [(ngModel)]="formModel.age">
+  <label for="address">ที่อยู่:</label>
+  <input type="text" id="address" name="address" [(ngModel)]="formModel.address">
+  <label for="tel">เบอร์โทรศัพ์:</label>
+  <input type="text" id="tel" name="tel" [(ngModel)]="formModel.tel">
+  <button>{{ formModel.key ? 'อัพเดตข้อมูล' : 'เพิ่มข้อมูล' }}</button>
+  <button (click)="clearForm()" >ล้างข้อมูล</button>
+</form>
